@@ -53,18 +53,17 @@
     }
 
     function buildParticles() {
-      // density tuned for sparseness
-      const target = Math.round((w * h) / 28000);
-      const count = Math.max(28, Math.min(target, 70));
+      const target = Math.round((w * h) / 38000);
+      const count = Math.max(18, Math.min(target, 48));
       particles = [];
       for (let i = 0; i < count; i++) {
         particles.push({
           x: Math.random() * w,
           y: Math.random() * h,
-          vx: (Math.random() - 0.5) * 0.12,
-          vy: (Math.random() - 0.5) * 0.12,
-          r: Math.random() * 1.1 + 0.4,
-          a: Math.random() * 0.4 + 0.15,
+          vx: (Math.random() - 0.5) * 0.08,
+          vy: (Math.random() - 0.5) * 0.08,
+          r: Math.random() * 0.9 + 0.3,
+          a: Math.random() * 0.28 + 0.08,
         });
       }
     }
@@ -83,10 +82,10 @@
         const dx = p.x - mouseX;
         const dy = p.y - mouseY;
         const dist2 = dx * dx + dy * dy;
-        if (dist2 < 14000) {
-          const f = (14000 - dist2) / 14000;
-          p.x += (dx / Math.sqrt(dist2 + 0.001)) * f * 0.6;
-          p.y += (dy / Math.sqrt(dist2 + 0.001)) * f * 0.6;
+        if (dist2 < 10000) {
+          const f = (10000 - dist2) / 10000;
+          p.x += (dx / Math.sqrt(dist2 + 0.001)) * f * 0.4;
+          p.y += (dy / Math.sqrt(dist2 + 0.001)) * f * 0.4;
         }
 
         // wrap edges
