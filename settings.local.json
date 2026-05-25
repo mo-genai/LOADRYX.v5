@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/mohge/Downloads/loadryx/LR/X/**)",
+      "Read(//c/Users/mohge/Downloads/loadryx/LR/**)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}
